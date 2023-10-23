@@ -1,48 +1,65 @@
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
 
 /** @title {{{title}}} - {{{href}}} */
-export interface Link {
-    title: string;
-    href: string;
-  }
-  
-export interface Props {
-    logo?: DecoImage;
-    title?: string;
-    /** @format textarea */
-    headline?: string;
-    links?: Array<Link>;
+export interface TitleHero {
+  titleWhite?: string;
+  titleDefault?: string;
 }
 
-export default function Hero({
-    title = "deco.cx",
-    logo = "/logo.svg",
-    headline = "The digital experience platform that combines performance and personalization for the ultimate sales results.",
-    links = [
-        { title: "Official website", "href": "https://deco.cx/", },
-        { title: "Linkedin", "href": "https://www.linkedin.com/company/deco-cx/", },
-        { title: "Discord", "href": "https://deco.cx/discord", },
-    ]
-}: Props) {
-    return (
-        <header class="lg:container mx-8 md:mx-16 lg:mx-auto mt-8 md:mt-12 mb-28 text-xl md:text-base">
-            <div class="mb-10 md:mb-20">
-                <img
-                    class="object-cover w-20"
-                    src={logo}
-                    alt={title}
-                />
-            </div>
-            <div class="font-bold text-3xl lg:text-6xl leading-tight lg:leading-none xl:w-5/6">{headline}</div>
-            {!!links?.length && (
-                <ul class="mt-8 flex flex-col md:flex-row gap-2 md:gap-4">
-                {links.map(({ href, title }) => (
-                    <li>
-                        <a target="_blank" href={href} aria-label={title} class="link">{title}</a>
-                    </li>
-                ))}
-                </ul>
-            )}
-        </header>
-    )
+export interface Paragraph {
+  simple?: string;
+  bold?: string;
+}
+
+export interface Props {
+  title?: TitleHero;
+  /** @format textarea */
+  paragraph?: Paragraph;
+  btnLabel: string;
+  image: DecoImage;
+}
+
+export default function Hero({ title, paragraph, image, btnLabel }: Props) {
+  return (
+    <section
+      className={"px-6 bg-primary h-screen w-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-center items-center md:gap-6 xl:px-16"}
+    >
+      <div className={"py-7"}>
+        <div>
+          <h2
+            className={" text-secondary text-[1.6rem] leading-[2rem] lg:text-[2.2rem] lg:leading-[3rem] xl:text-[2.5rem] xl:leading-[2.5rem]"}
+          >
+            <span className={"font-bold text-base-100"}>
+              {title?.titleWhite + " "}
+            </span>
+            {title?.titleDefault}
+          </h2>
+        </div>
+        <div className={"my-8"}>
+          <p
+            className={"text-base-100 text-[1.22rem] leading-5 lg:text-[1.3rem] lg:leading-6 xl:text-[1.6rem] xl:leading-[1.8rem]"}
+          >
+            {paragraph?.simple}
+            <strong>{paragraph?.bold}</strong>
+          </p>
+        </div>
+        <div
+          className={"my-8 fixed bottom-6 flex justify-center md:justify-start md:static md:left-0 md:translate-x-0 w-full left-[50%] translate-x-[-50%]"}
+        >
+          <a
+            className={"bg-secondary rounded-[32px] px-7 py-3 flex justify-center items-center w-auto w-[256px] "}
+          >
+            <p className={" font-bold text-base-100"}>
+              {btnLabel}
+            </p>
+          </a>
+        </div>
+      </div>
+      <div className={""}>
+        <picture className={"md:px-3"}>
+          <image src={image} className={"md:px-8"} />
+        </picture>
+      </div>
+    </section>
+  );
 }

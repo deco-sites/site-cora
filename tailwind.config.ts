@@ -23,4 +23,11 @@ export const theme = {
 
 export default {
   content: ["./**/*.tsx"],
+  theme: {
+    colors: {
+      "base-400": "#fdcdd5",
+      "base-500": "#fcc0ca",
+      "base-600": "#fd7b94",
+    },
+  },
 };
