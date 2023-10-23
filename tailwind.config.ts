@@ -28,6 +28,10 @@ export default {
       "base-400": "#fdcdd5",
       "base-500": "#fcc0ca",
       "base-600": "#fd7b94",
+      "gray-100": "#f0f4f8",
+      "gray-200": "#c7cbcf",
+      "gray-300": "#6b7076",
+      "black": "#000",
     },
   },
 };

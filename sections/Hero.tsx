@@ -52,10 +52,10 @@ export default function Hero(
           </p>
         </div>
         <div
-          className={"my-8 fixed bottom-6 flex justify-center md:justify-start md:static md:left-0 md:translate-x-0 w-full left-[50%] translate-x-[-50%]"}
+          className={"my-8 fixed bottom-6 flex justify-center md:justify-start md:static md:left-0 md:translate-x-0 w-full left-[50%] translate-x-[-50%] z-20"}
         >
           <a
-            className={"bg-secondary rounded-[32px] px-7 py-3 flex justify-center items-center w-[256px] "}
+            className={"bg-black rounded-[32px] px-7 py-3 flex justify-center items-center w-[256px] "}
             href={button.href}
           >
             <p className={" font-bold text-base-100"}>
