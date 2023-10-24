@@ -89,7 +89,7 @@ function BannerCarousel({ images, title }: SliderNews) {
 
   return (
     <div
-      className={"pt-10 justify-center items-center flex-col px-8 grid "}
+      className={"pt-10 justify-center items-center flex-col px-8 grid pb-5"}
     >
       <h3
         className={"mb-5 text-lg self-start text-gray-300 font-light xl:text-[1.5rem] col-start-2 col-end-11"}
