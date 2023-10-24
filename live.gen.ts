@@ -12,10 +12,11 @@ import * as $$$$$$$$2 from "./sections/CardsSection.tsx";
 import * as $$$$$$$$3 from "./sections/Footer.tsx";
 import * as $$$$$$$$4 from "./sections/Hero.tsx";
 import * as $$$$$$$$5 from "./sections/ParagraphList.tsx";
-import * as $$$$$$$$6 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$$$7 from "./sections/SlideNews.tsx";
-import * as $$$$$$$$8 from "./sections/TableInfos.tsx";
-import * as $$$$$$$$9 from "./sections/Theme.tsx";
+import * as $$$$$$$$6 from "./sections/Question.tsx";
+import * as $$$$$$$$7 from "./sections/SimpleTextList.tsx";
+import * as $$$$$$$$8 from "./sections/SlideNews.tsx";
+import * as $$$$$$$$9 from "./sections/TableInfos.tsx";
+import * as $$$$$$$$10 from "./sections/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -179,10 +180,11 @@ const manifest = {
     "deco-sites/site-cora/sections/Footer.tsx": $$$$$$$$3,
     "deco-sites/site-cora/sections/Hero.tsx": $$$$$$$$4,
     "deco-sites/site-cora/sections/ParagraphList.tsx": $$$$$$$$5,
-    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$6,
-    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$7,
-    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$8,
-    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$9,
+    "deco-sites/site-cora/sections/Question.tsx": $$$$$$$$6,
+    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$7,
+    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$8,
+    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$9,
+    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$10,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
