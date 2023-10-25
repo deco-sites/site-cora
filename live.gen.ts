@@ -14,12 +14,13 @@ import * as $$$$$$$$4 from "./sections/Hero.tsx";
 import * as $$$$$$$$5 from "./sections/MediaSection.tsx";
 import * as $$$$$$$$6 from "./sections/ParagraphList.tsx";
 import * as $$$$$$$$7 from "./sections/Question.tsx";
-import * as $$$$$$$$8 from "./sections/SectionInvestors.tsx";
-import * as $$$$$$$$9 from "./sections/SectionPartenes.tsx";
-import * as $$$$$$$$10 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$$$11 from "./sections/SlideNews.tsx";
-import * as $$$$$$$$12 from "./sections/TableInfos.tsx";
-import * as $$$$$$$$13 from "./sections/Theme.tsx";
+import * as $$$$$$$$8 from "./sections/SectionBlog.tsx";
+import * as $$$$$$$$9 from "./sections/SectionInvestors.tsx";
+import * as $$$$$$$$10 from "./sections/SectionPartenes.tsx";
+import * as $$$$$$$$11 from "./sections/SimpleTextList.tsx";
+import * as $$$$$$$$12 from "./sections/SlideNews.tsx";
+import * as $$$$$$$$13 from "./sections/TableInfos.tsx";
+import * as $$$$$$$$14 from "./sections/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -185,12 +186,13 @@ const manifest = {
     "deco-sites/site-cora/sections/MediaSection.tsx": $$$$$$$$5,
     "deco-sites/site-cora/sections/ParagraphList.tsx": $$$$$$$$6,
     "deco-sites/site-cora/sections/Question.tsx": $$$$$$$$7,
-    "deco-sites/site-cora/sections/SectionInvestors.tsx": $$$$$$$$8,
-    "deco-sites/site-cora/sections/SectionPartenes.tsx": $$$$$$$$9,
-    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$10,
-    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$11,
-    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$12,
-    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$13,
+    "deco-sites/site-cora/sections/SectionBlog.tsx": $$$$$$$$8,
+    "deco-sites/site-cora/sections/SectionInvestors.tsx": $$$$$$$$9,
+    "deco-sites/site-cora/sections/SectionPartenes.tsx": $$$$$$$$10,
+    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$11,
+    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$12,
+    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$13,
+    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$14,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
