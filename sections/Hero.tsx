@@ -30,7 +30,7 @@ export default function Hero(
 ) {
   return (
     <section
-      className={"px-6 bg-primary h-screen w-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-center items-center md:gap-6 xl:px-16"}
+      className={"px-6 pt-16 bg-primary h-screen w-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-center items-center md:gap-6 xl:px-16"}
     >
       <div className={"py-7"}>
         <div>

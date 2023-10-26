@@ -59,23 +59,25 @@ export default function Footer(
   return (
     <div>
       <div className={"bg-[#3b3b3b] pb-12"}>
-        <div>
-          <div className={"hidden"}>
-            <h4>
+        <div
+          className={"flex flex-row lg:grid lg:grid-cols-[30%_1fr] lg:grid-rows-1 bg-[#202020]"}
+        >
+          <div className={"hidden lg:flex lg:justify-center lg:items-center"}>
+            <h4 className={"text-base-100 font-bold text-3xl"}>
               {titleSocialMedia}
             </h4>
           </div>
           <div
-            className={"grid grid-cols-5 grid-rows-1 justify-center items-center  w-full h-full bg-black"}
+            className={"grid grid-cols-5 grid-rows-1 justify-center items-center  w-full h-full bg-[#202020]"}
           >
             {socialMedia.map((link) => {
               return (
                 <div
-                  className={"border-base-100 border-r first:border-l min-h-[100px] flex justify-center items-center w-full h-full"}
+                  className={"border-base-100 border-r first:border-l min-h-[100px] lg:min-h-[208px] flex justify-center items-center w-full h-full hover:bg-primary"}
                 >
                   <a href={link.href}>
                     <image
-                      className={"w-8 h-8"}
+                      className={"w-8 h-8 lg:w-14 lg:h-14"}
                       src={link.icon.src}
                       alt={link.icon.alt}
                       width={24}

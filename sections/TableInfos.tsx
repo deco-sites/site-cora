@@ -198,19 +198,19 @@ export default function TableInfos(
   return (
     <div className={"px-6 py-12 bg-gray-100 grid grid-cols-12"}>
       <h3
-        className={"text-[2.2rem] leading-[2.7rem] text-secondary my-6 col-start-2 col-end-10 xl:text-7xl"}
+        className={"text-[2.2rem] leading-[2.7rem] text-secondary my-6 col-start-1 xl:col-start-2 col-end-10 xl:text-7xl"}
       >
         {title.titleSimple}
         <span className={"font-bold text-primary"}>{title.titleColor}</span>
       </h3>
-      <div className={"md:hidden col-start-2 col-end-[-2] row-start-2"}>
+      <div className={"md:hidden col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2] row-start-2"}>
         <MenuTable
           title={title}
           primaryOption={primaryOption}
           secordOption={secordOption}
         />
       </div>
-      <div className={"md:flex hidden flex-col col-start-2 col-end-[-2]"}>
+      <div className={"md:flex hidden flex-col col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2]"}>
         <div
           className={"grid grid-cols-[100%_200px_200px] flex-row justify-end py-5 px-8"}
         >
