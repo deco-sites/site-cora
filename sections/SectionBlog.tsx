@@ -31,6 +31,7 @@ function Post({ post }: { post: Posts }) {
             className={"rounded-xl mb-8 sm:mb-0 w-full h-full sm:object-cover sm:min-h-[200px] lg:min-h-[300px]"}
             src={image.src}
             alt={image.alt}
+            loading={"lazy"}
           />
           <div className={"flex flex-col sm:justify-between"}>
             <h5

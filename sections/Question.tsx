@@ -45,7 +45,7 @@ export default function Question({ question }: { question: Question }) {
           <div
             className={"md:col-start-10 md:col-end-[-1] xl:col-start-9 xl:col-end-12 translate-y-[20%] w-[200px] xl:w-[390px]"}
           >
-            <image src={image.image} alt={image.alt} />
+            <image src={image.image} alt={image.alt} loading={"lazy"} />
           </div>
         </div>
       </div>

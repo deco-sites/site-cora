@@ -71,6 +71,7 @@ export default function Card({ card }: { card: Card }) {
           className={"h-[160px] translate-x-[1.5rem] rounded-br-lg xl:h-[220px]"}
           src={image.imagem}
           alt={image.alt}
+          loading={"lazy"}
         >
         </image>
       </div>

@@ -82,6 +82,7 @@ export default function Footer(
                       alt={link.icon.alt}
                       width={24}
                       height={24}
+                      loading={"lazy"}
                     />
                   </a>
                 </div>
@@ -153,6 +154,7 @@ export default function Footer(
                         alt={container.secordSection.primaryCol.linkAndroid
                           .image
                           .alt}
+                          loading={"lazy"}
                       />
                     </a>
                   </div>
@@ -166,6 +168,7 @@ export default function Footer(
                           .src}
                         alt={container.secordSection.primaryCol.linkIOS.image
                           .alt}
+                          loading={"lazy"}
                       />
                     </a>
                   </div>

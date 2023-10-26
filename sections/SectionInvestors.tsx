@@ -19,6 +19,7 @@ export default function SectionInvestors({ image, title }: Props) {
             className={"rounded-xl mb-7 w-full"}
             src={image.src}
             alt={image.alt}
+            loading={"lazy"}
           />
         </div>
         <div
