@@ -32,7 +32,7 @@ export default function Article(
       } px-6 flex flex-col sm:flex-row-reverse odd:sm:flex-row items-center xl:px-16`}
     >
       <div className={"md:w-2/4"}>
-        <image src={image.image} alt={image.alt} />
+        <image src={image.image} alt={image.alt} loading={"lazy"} />
       </div>
       <div className={"flex flex-col md:w-2/4"}>
         <div>

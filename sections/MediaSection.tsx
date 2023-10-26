@@ -32,6 +32,7 @@ export default function MediaSection(
               className={"rounded-xl group-hover:opacity-50"}
               src={imageOfVideo.image}
               alt={imageOfVideo.image}
+              loading={"lazy"}
             />
           </div>
           <div
