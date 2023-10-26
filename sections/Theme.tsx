@@ -18,19 +18,19 @@ export interface MainColors {
   /**
    * @format color
    * @title Primary
-   * @default #003232
+   * @default #fe3e6d
    */
   "primary": string;
   /**
    * @format color
    * @title Scondary
-   * @default #8C3D3D
+   * @default #fd7b94
    */
   "secondary": string;
   /**
    * @format color
    * @title Tertiary
-   * @default #00FF7F
+   * @default #f0f4f8
    */
   "tertiary": string;
 }
@@ -45,14 +45,17 @@ export interface ComplementaryColors {
 export interface BaseColorOptional {
   /**
    * @format color
+   * @default ##fee6ea
    */
   "base-200"?: string;
   /**
    * @format color
+   * @default #fdd9df
    */
   "base-300"?: string;
   /**
    * @format color
+   * @default #fdcdd5
    */
   "base-content"?: string;
 }
