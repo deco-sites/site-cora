@@ -4,23 +4,25 @@
 
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/MenuTable.tsx";
-import * as $$$$$1 from "./islands/SliderJS.tsx";
+import * as $$$$$0 from "./islands/ButtonNav.tsx";
+import * as $$$$$1 from "./islands/MenuTable.tsx";
+import * as $$$$$2 from "./islands/SliderJS.tsx";
 import * as $$$$$$$$0 from "./sections/Articles.tsx";
 import * as $$$$$$$$1 from "./sections/Benefit.tsx";
 import * as $$$$$$$$2 from "./sections/CardsSection.tsx";
 import * as $$$$$$$$3 from "./sections/Footer.tsx";
-import * as $$$$$$$$4 from "./sections/Hero.tsx";
-import * as $$$$$$$$5 from "./sections/MediaSection.tsx";
-import * as $$$$$$$$6 from "./sections/ParagraphList.tsx";
-import * as $$$$$$$$7 from "./sections/Question.tsx";
-import * as $$$$$$$$8 from "./sections/SectionBlog.tsx";
-import * as $$$$$$$$9 from "./sections/SectionInvestors.tsx";
-import * as $$$$$$$$10 from "./sections/SectionPartenes.tsx";
-import * as $$$$$$$$11 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$$$12 from "./sections/SlideNews.tsx";
-import * as $$$$$$$$13 from "./sections/TableInfos.tsx";
-import * as $$$$$$$$14 from "./sections/Theme.tsx";
+import * as $$$$$$$$4 from "./sections/Header.tsx";
+import * as $$$$$$$$5 from "./sections/Hero.tsx";
+import * as $$$$$$$$6 from "./sections/MediaSection.tsx";
+import * as $$$$$$$$7 from "./sections/ParagraphList.tsx";
+import * as $$$$$$$$8 from "./sections/Question.tsx";
+import * as $$$$$$$$9 from "./sections/SectionBlog.tsx";
+import * as $$$$$$$$10 from "./sections/SectionInvestors.tsx";
+import * as $$$$$$$$11 from "./sections/SectionPartenes.tsx";
+import * as $$$$$$$$12 from "./sections/SimpleTextList.tsx";
+import * as $$$$$$$$13 from "./sections/SlideNews.tsx";
+import * as $$$$$$$$14 from "./sections/TableInfos.tsx";
+import * as $$$$$$$$15 from "./sections/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -169,8 +171,9 @@ const manifest = {
     "./routes/styles.css.ts": $$$$0,
   },
   "islands": {
-    "./islands/MenuTable.tsx": $$$$$0,
-    "./islands/SliderJS.tsx": $$$$$1,
+    "./islands/ButtonNav.tsx": $$$$$0,
+    "./islands/MenuTable.tsx": $$$$$1,
+    "./islands/SliderJS.tsx": $$$$$2,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,
@@ -182,17 +185,18 @@ const manifest = {
     "deco-sites/site-cora/sections/Benefit.tsx": $$$$$$$$1,
     "deco-sites/site-cora/sections/CardsSection.tsx": $$$$$$$$2,
     "deco-sites/site-cora/sections/Footer.tsx": $$$$$$$$3,
-    "deco-sites/site-cora/sections/Hero.tsx": $$$$$$$$4,
-    "deco-sites/site-cora/sections/MediaSection.tsx": $$$$$$$$5,
-    "deco-sites/site-cora/sections/ParagraphList.tsx": $$$$$$$$6,
-    "deco-sites/site-cora/sections/Question.tsx": $$$$$$$$7,
-    "deco-sites/site-cora/sections/SectionBlog.tsx": $$$$$$$$8,
-    "deco-sites/site-cora/sections/SectionInvestors.tsx": $$$$$$$$9,
-    "deco-sites/site-cora/sections/SectionPartenes.tsx": $$$$$$$$10,
-    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$11,
-    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$12,
-    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$13,
-    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$14,
+    "deco-sites/site-cora/sections/Header.tsx": $$$$$$$$4,
+    "deco-sites/site-cora/sections/Hero.tsx": $$$$$$$$5,
+    "deco-sites/site-cora/sections/MediaSection.tsx": $$$$$$$$6,
+    "deco-sites/site-cora/sections/ParagraphList.tsx": $$$$$$$$7,
+    "deco-sites/site-cora/sections/Question.tsx": $$$$$$$$8,
+    "deco-sites/site-cora/sections/SectionBlog.tsx": $$$$$$$$9,
+    "deco-sites/site-cora/sections/SectionInvestors.tsx": $$$$$$$$10,
+    "deco-sites/site-cora/sections/SectionPartenes.tsx": $$$$$$$$11,
+    "deco-sites/site-cora/sections/SimpleTextList.tsx": $$$$$$$$12,
+    "deco-sites/site-cora/sections/SlideNews.tsx": $$$$$$$$13,
+    "deco-sites/site-cora/sections/TableInfos.tsx": $$$$$$$$14,
+    "deco-sites/site-cora/sections/Theme.tsx": $$$$$$$$15,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
