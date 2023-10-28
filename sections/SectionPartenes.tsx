@@ -42,7 +42,12 @@ export default function SectionPartenes(
           >
             {images.map((image) => {
               return (
-                <image className={"my-2"} src={image.src} alt={image.alt} loading={"lazy"}/>
+                <image
+                  className={"my-2"}
+                  src={image.src}
+                  alt={image.alt}
+                  loading={"lazy"}
+                />
               );
             })}
           </div>
