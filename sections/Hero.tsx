@@ -32,12 +32,12 @@ export default function Hero(
         <div className={"py-7 pt-14 sm:p-0 md:col-start-1 md:col-end-7"}>
           <div
             dangerouslySetInnerHTML={{ __html: titleHero }}
-            className={" text-secondary text-[1.7rem] leading-[2.2rem] lg:text-[2.4rem] lg:leading-[3.2rem] 2xl:text-[4rem] 2xl:leading-[4.7rem]"}
+            className={" text-secondary text-[1.6rem] leading-[2.2rem] lg:text-[2.4rem] lg:leading-[3.2rem] 2xl:text-[4rem] 2xl:leading-[4.7rem]"}
           >
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: paragraphHero }}
-            className={" my-8 text-base-100 text-[1.22rem] leading-6 lg:text-[1.15rem] lg:leading-6 xl:text-[1.4rem] xl:leading-[1.8rem]"}
+            className={" my-8 text-base-100 text-[1.15rem] leading-6 lg:text-[1.15rem] lg:leading-6 xl:text-[1.4rem] xl:leading-[1.8rem]"}
           >
             <p>
             </p>
