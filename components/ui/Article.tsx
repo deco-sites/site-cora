@@ -6,7 +6,7 @@ export interface Props {
     image: DecoImage;
     alt: string;
   };
-  title: string;
+  title: HTML;
   description: HTML;
   link: {
     label: string;
@@ -41,11 +41,11 @@ export default function Article(
         </div>
         <div className={"flex flex-col md:w-2/4 lg:w-2/5"}>
           <div>
-            <h4
+            <div
+              dangerouslySetInnerHTML={{ __html: title }}
               className={"mb-6 font-bold text-[1.5rem] text-secondary xl:text-[2rem] 2xl:text-[3rem]"}
             >
-              {title}
-            </h4>
+            </div>
             <div
               className={"text-secondary mb-7 xl:text-[1.4rem]"}
               dangerouslySetInnerHTML={{ __html: description }}

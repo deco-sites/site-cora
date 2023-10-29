@@ -5,6 +5,7 @@ import SliderJS from "../islands/SliderJS.tsx";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { useId } from "../sdk/useId.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export interface Image {
   image: LiveImage;
@@ -16,7 +17,7 @@ export interface Image {
  * @titleBy alt
  */
 export interface SliderNews {
-  title: string;
+  title: HTML;
   images: Image[];
 }
 
@@ -91,15 +92,15 @@ function BannerCarousel({ images, title }: SliderNews) {
   const id = useId();
 
   return (
-    <div className={"pt-10 px-7 pb-5 w-full "}>
+    <div className={"pt-10  pb-5 w-full "}>
       <div
-        className={"max-w-[1700px] md:px-16 md:grid md:grid-cols-12 md:gap-6 m-auto justify-center items-center flex flex-col pb-5"}
+        className={"max-w-[1700px] px-7 md:px-16 md:grid md:grid-cols-12 md:gap-6 m-auto justify-center items-center flex flex-col pb-5"}
       >
-        <h3
+        <div
+          dangerouslySetInnerHTML={{ __html: title }}
           className={" mb-5 text-lg md:col-start-1 md:col-end-12 xl:col-start-2 xl:col-end-[-2] self-start text-gray-300 font-light xl:text-[1.5rem] col-start-2 col-end-11"}
         >
-          {title}
-        </h3>
+        </div>
         <div
           id={id}
           class="grid grid-cols-1 md:col-start-1 md:col-end-12 xl:col-start-2 xl:col-end-[-2] grid-rows-2"

@@ -7,7 +7,7 @@ type Image = {
 };
 
 export interface Props {
-  title: string;
+  title: HTML;
   description: HTML;
   images: Image[];
   link: {
@@ -27,11 +27,11 @@ export default function SectionPartenes(
         <div
           className={"w-full lg:col-start-2 lg:col-end-4 lg:flex lg:flex-col justify-center"}
         >
-          <h3
+          <div
+            dangerouslySetInnerHTML={{ __html: title }}
             className={"text-4xl text-secondary sm:text-5xl md:text-[2.86rem] md:leading-[3.8rem] xl:text-[5rem] xl:leading-[5.9rem] 2xl:text-[5rem] my-6 lg:my-12"}
           >
-            {title}
-          </h3>
+          </div>
           <div
             className={"text-secondary text-[1.3rem] xl:text-[1.4rem]"}
             dangerouslySetInnerHTML={{ __html: description }}

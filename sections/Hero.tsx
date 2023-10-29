@@ -24,10 +24,10 @@ export default function Hero(
 ) {
   return (
     <section
-      className={"px-6 pt-16 bg-primary h-screen w-full flex justify-center items-center"}
+      className={"pt-16 bg-primary h-screen w-full flex justify-center items-center"}
     >
       <div
-        className={"max-w-[1700px] min-h-[604px] m-auto grid grid-cols-1 grid-rows-2 md:grid-cols-12 md:grid-rows-1 justify-center items-center md:gap-6 lg:px-16"}
+        className={"max-w-[1700px] px-6 min-h-[604px] m-auto grid grid-cols-1 grid-rows-2 md:grid-cols-12 md:grid-rows-1 justify-center items-center md:gap-6 lg:px-16"}
       >
         <div className={"py-7 pt-14 sm:p-0 md:col-start-1 md:col-end-7"}>
           <div
@@ -37,7 +37,7 @@ export default function Hero(
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: paragraphHero }}
-            className={" my-8 text-base-100 text-[1.15rem] leading-6 lg:text-[1.15rem] lg:leading-6 xl:text-[1.4rem] xl:leading-[1.8rem]"}
+            className={" my-8 text-base-100 text-[1.15rem] leading-[1.5rem] lg:text-[1.15rem] lg:leading-6 xl:text-[1.4rem] xl:leading-[1.8rem]"}
           >
             <p>
             </p>

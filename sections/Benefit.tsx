@@ -1,22 +1,18 @@
 import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 import Icon from "../components/ui/Icon.tsx";
 
-export interface ItenList {
-  label: string;
-}
-
 export interface BenefitProps {
   title: HTML;
-  ItenList: ItenList[];
+  ItenList: HTML[];
 }
 
 export default function Benefit({ title, ItenList }: BenefitProps) {
   return (
     <div
-      className={"bg-secondary py-12 px-6 "}
+      className={"bg-secondary py-12  "}
     >
       <div
-        className={"max-w-[1700px] m-auto flex flex-col xl:grid lg:grid-cols-12 lg:px-16 lg:gap-6 md:mt-0"}
+        className={"max-w-[1700px] px-6 m-auto flex flex-col xl:grid lg:grid-cols-12 lg:px-16 lg:gap-6 md:mt-0"}
       >
         <div
           className={" lg:col-start-2 lg:col-end-6 flex flex-col items-start justify-center m-auto"}
@@ -61,11 +57,11 @@ export default function Benefit({ title, ItenList }: BenefitProps) {
                     </svg>
                     {" "}
                   </div>
-                  <li
+                  <div
+                    dangerouslySetInnerHTML={{ __html: iten }}
                     className={"text-base-100 font-extralight lg:font-normal lg:text-[1.15rem]"}
                   >
-                    {iten.label}
-                  </li>
+                  </div>
                 </div>
               );
             })}

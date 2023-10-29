@@ -3,8 +3,8 @@ import Card from "deco-sites/start/components/ui/Card.tsx";
 import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 interface Card {
-  title: string;
-  description: string;
+  title: HTML;
+  description: HTML;
   link: {
     label: string;
     href: string;

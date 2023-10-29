@@ -7,7 +7,7 @@ export interface Article {
     image: DecoImage;
     alt: string;
   };
-  title: string;
+  title: HTML;
   description: HTML;
   link: {
     label: string;

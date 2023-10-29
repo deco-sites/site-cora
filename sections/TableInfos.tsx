@@ -3,15 +3,15 @@ import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
 import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export type Link = {
-  titleSimple: string;
-  titleColor: string;
+  titleSimple: HTML;
+  titleColor: HTML;
   href: string;
 };
 
 export interface RowProps {
   image: DecoImage;
-  title: string;
-  description: string;
+  title: HTML;
+  description: HTML;
   iten: "Check" | "Link";
   link?: Link;
 }
@@ -19,11 +19,11 @@ export interface RowProps {
 export interface TableProps {
   title: HTML;
   primaryOption: {
-    title: string;
+    title: HTML;
     rowProps: RowProps[];
   };
   secordOption: {
-    title: string;
+    title: HTML;
     rowProps: RowProps[];
   };
 }
@@ -46,14 +46,20 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
       >
       </image>
       <div>
-        <h4
+        <div
+          dangerouslySetInnerHTML={{
+            __html: primaryOption.rowProps[index].title,
+          }}
           className={"text-secondary text-xl 2xl:text-[1.8rem] font-bold 2xl:font-extrabold 2xl:leading-[2.3rem]"}
         >
-          {primaryOption.rowProps[index].title}
-        </h4>
-        <p className={"text-secondary text-base"}>
-          {primaryOption.rowProps[index].description}
-        </p>
+        </div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: primaryOption.rowProps[index].description,
+          }}
+          className={"text-secondary text-base"}
+        >
+        </div>
       </div>
       <div className={"flex justify-center items-center w-full"}>
         {primaryOption.rowProps[index].iten == "Check"
@@ -87,14 +93,20 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
                 href={primaryOption.rowProps[index].link?.href}
                 className={"group w-full justify-center items-center lg:text-[1.4rem]"}
               >
-                <p className={"text-secondary font-bold group"}>
-                  {primaryOption.rowProps[index].link?.titleSimple}
-                </p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: primaryOption.rowProps[index].link!.titleSimple,
+                  }}
+                  className={"text-secondary font-bold group"}
+                >
+                </div>
                 <div>
-                  <p
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: primaryOption.rowProps[index].link!.titleColor,
+                    }}
                     className={"text-primary group flex flex-row font-bold text-sm lg:text-base"}
                   >
-                    {primaryOption.rowProps[index].link?.titleColor}
                     <span
                       className={"group-hover:translate-x-4 duration-300 ease-in-out"}
                     >
@@ -121,7 +133,7 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
                         </path>
                       </svg>
                     </span>
-                  </p>
+                  </div>
                 </div>
               </a>
             </div>
@@ -230,18 +242,18 @@ export default function TableInfos(
             className={"grid grid-cols-[80px_3fr_1.7fr_1.7fr] flex-row justify-end py-5 px-8"}
           >
             <div className={"flex justify-center items-center col-start-3"}>
-              <p
+              <div
+                dangerouslySetInnerHTML={{ __html: primaryOption.title }}
                 className={"font-bold text-secondary text-[0.81rem] md:text-base lg:text-xl lg:font-extrabold 2xl:text-[1.8rem]"}
               >
-                {primaryOption.title}
-              </p>
+              </div>
             </div>
             <div className={"flex justify-center items-center col-start-4"}>
-              <p
+              <div
+                dangerouslySetInnerHTML={{ __html: secordOption.title }}
                 className={"font-bold text-secondary text-[0.81rem] md:text-base lg:text-xl lg:font-extrabold 2xl:text-[1.8rem]"}
               >
-                {secordOption.title}
-              </p>
+              </div>
             </div>
           </div>
           <div className={" flex flex-col bg-base-100 p-8 rounded-lg "}>

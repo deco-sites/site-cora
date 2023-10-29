@@ -1,4 +1,5 @@
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
+import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export interface Posts {
   href: string;
@@ -6,15 +7,12 @@ export interface Posts {
     src: DecoImage;
     alt: string;
   };
-  title: string;
-  date: string;
+  title: HTML;
+  date: HTML;
 }
 
 export interface Props {
-  title: {
-    titleSimple: string;
-    titleColor: string;
-  };
+  title: HTML;
   posts: Posts[];
 }
 
@@ -34,14 +32,16 @@ function Post({ post }: { post: Posts }) {
             loading={"lazy"}
           />
           <div className={"flex flex-col sm:justify-between"}>
-            <h5
+            <div
+              dangerouslySetInnerHTML={{ __html: title }}
               className={"mb-7 text-[1.5rem] text-secondary sm:mb-0 lg:text-[2.2rem] xl:text-[3.4rem] 2xl:text-[3rem]"}
             >
-              {title}
-            </h5>
-            <p className={"font-bold text-primary text-base"}>
-              {date}
-            </p>
+            </div>
+            <div
+              dangerouslySetInnerHTML={{ __html: date }}
+              className={"font-bold text-primary text-base"}
+            >
+            </div>
           </div>
           <div
             className={"rounded-full bg-primary hidden sm:flex w-[28px] h-[28px] sm:justify-center sm:items-center"}
@@ -76,12 +76,11 @@ export default function SectionBlog({ title, posts }: Props) {
       <div
         className={"w-full max-w-[1700px] m-auto px-6 xl:px-16 flex flex-col md:gap-6"}
       >
-        <h3
+        <div
+          dangerouslySetInnerHTML={{ __html: title }}
           className={"my-6 text-[2rem] text-secondary sm:text-[2.85rem] xl:text-[5rem] xl:my-12 xl:leading-[5.9rem]"}
         >
-          {title.titleSimple}
-          <strong className={"text-primary"}>{title.titleColor}</strong>
-        </h3>
+        </div>
         <div className={"pt-10"}>
           {posts.map((post) => {
             return <Post post={post} />;
