@@ -1,9 +1,10 @@
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
 import Card from "deco-sites/start/components/ui/Card.tsx";
+import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 interface Card {
-  title: string;
-  description: string;
+  title: HTML;
+  description: HTML;
   link: {
     label: string;
     href: string;
@@ -15,28 +16,20 @@ interface Card {
 }
 
 interface Props {
-  title: {
-    titleSimple: string;
-    titleColor: string;
-  };
+  title: HTML;
   cards: Card[];
 }
 
 export default function SectionCard({ title, cards }: Props) {
   return (
     <div className={"py-14  flex flex-col"}>
-      <div className={"grid-cols-12 grid w-full px-6 xl:px-16"}>
+      <div
+        className={" px-6 sm:px-8 xl:px-16 grid grid-cols-12 md:gap-6 max-w-[1700px] m-auto"}
+      >
         <div
-          className={"xl:col-start-2 xl:col-end-[-2] md:col-end-9 col-start-1 col-end-[-1]"}
+          dangerouslySetInnerHTML={{ __html: title }}
+          className={"text-[2rem] leading-[2.5rem] sm:text-[2.85rem] sm:leading-[3.5rem] text-secondary my-6 col-start-1 col-end-[-1] min-[600px]:col-end-9 xl:col-start-2 xl:col-end-11 xl:text-[5rem] xl:leading-[5.5rem] 2xl:my-12"}
         >
-          <h3
-            className={"my-8 text-[2.2rem] sm:text-[3rem] sm:leading-[3.5rem] text-secondary md:text-5xl xl:text-[5.6rem] xl:my-14"}
-          >
-            {title.titleSimple}
-            <span className={"text-primary font-bold"}>
-              {title.titleColor}
-            </span>
-          </h3>
         </div>
         <div
           className={"xl:col-start-2 xl:col-end-[-2] col-start-1 col-end-[-1]"}

@@ -7,7 +7,7 @@ type Image = {
 };
 
 export interface Props {
-  title: string;
+  title: HTML;
   description: HTML;
   images: Image[];
   link: {
@@ -20,18 +20,18 @@ export default function SectionPartenes(
   { title, description, images, link }: Props,
 ) {
   return (
-    <div className={"lg:pt-20 lg:pb-24 lg:grid lg:grid-cols-12"}>
+    <div className={"lg:pt-20 lg:pb-24 xl:grid xl:grid-cols-12"}>
       <div
-        className={"w-full bg-gray-100 px-7 lg:px-0 py-14 lg:col-start-3 xl:col-start-4 lg:col-end-[-1] lg:grid lg:grid-cols-[20%_auto_10%_10%] min-h-[750px] "}
+        className={"w-full bg-gray-100 px-6 xl:px-0 py-14 xl:col-start-3 2xl:col-start-4 xl:col-end-[-1] xl:grid xl:grid-cols-[20%_auto_10%_10%] min-h-[750px] "}
       >
         <div
           className={"w-full lg:col-start-2 lg:col-end-4 lg:flex lg:flex-col justify-center"}
         >
-          <h3
-            className={"text-4xl text-secondary sm:text-5xl md:text-5xl md:leading-[3.8rem] lg:text-[4rem] lg:leading-[4.9rem] xl:text-[5rem] my-6 lg:my-12"}
+          <div
+            dangerouslySetInnerHTML={{ __html: title }}
+            className={"text-4xl text-secondary sm:text-5xl md:text-[2.86rem] md:leading-[3.8rem] xl:text-[5rem] xl:leading-[5.9rem] 2xl:text-[5rem] my-6 lg:my-12"}
           >
-            {title}
-          </h3>
+          </div>
           <div
             className={"text-secondary text-[1.3rem] xl:text-[1.4rem]"}
             dangerouslySetInnerHTML={{ __html: description }}
@@ -42,7 +42,12 @@ export default function SectionPartenes(
           >
             {images.map((image) => {
               return (
-                <image className={"my-2"} src={image.src} alt={image.alt} loading={"lazy"}/>
+                <image
+                  className={"my-2"}
+                  src={image.src}
+                  alt={image.alt}
+                  loading={"lazy"}
+                />
               );
             })}
           </div>

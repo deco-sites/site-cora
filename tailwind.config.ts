@@ -33,5 +33,19 @@ export default {
       "gray-300": "#6b7076",
       "black": "#000",
     },
+    screens: {
+      "sm": { "min": "639px" },
+      // => @media (max-width: 639px) { ... }
+      "md": { "min": "767px" },
+      // => @media (max-width: 767px) { ... }
+      "lg": { "min": "1023px" },
+      // => @media (max-width: 1023px) { ... }
+      "xl": { "min": "1279px" },
+      // => @media (max-width: 1279px) { ... }
+      "xl-5": { "min": "1360px" },
+      // => @media (max-width: 1600px) { ... }
+      "2xl": { "min": "1600px" },
+      // => @media (max-width: 1600px) { ... }
+    },
   },
 };

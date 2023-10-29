@@ -18,19 +18,19 @@ export default function Card({ card }: { card: Card }) {
 
   return (
     <div
-      className={"rounded-lg odd:bg-base-500 sm:odd:bg-base-600 sm:odd:first:bg-base-500 sm:last:bg-base-500 sm:first:bg-base-500 bg-base-600 p-6 hover:scale-105 duration-500 ease-in-out pb-0 flex flex-col justify-between"}
+      className={"rounded-3xl odd:bg-base-500 sm:odd:bg-base-600 sm:odd:first:bg-base-500 sm:last:bg-base-500 sm:first:bg-base-500 bg-base-600 p-6 hover:scale-105 duration-500 ease-in-out pb-0 flex flex-col justify-between"}
     >
       <div>
-        <h4
-          className={"font-extrabold text-[1.2rem] text-secondary lg:text-[1.5rem]"}
+        <div
+          dangerouslySetInnerHTML={{ __html: title }}
+          className={"font-extrabold text-[1.4rem] text-secondary lg:text-[2rem]"}
         >
-          {title}
-        </h4>
-        <p
-          className={"my-10 text-[1rem] font-light text-secondary lg:text-[1.2rem]"}
+        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: description }}
+          className={"my-10 text-[1rem] font-light text-secondary 2xl:text-[1.2rem]"}
         >
-          {description}
-        </p>
+        </div>
         <a
           href={link.href}
           className={"group text-secondary flex flex-row gap-2 font-bold"}

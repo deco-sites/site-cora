@@ -12,7 +12,7 @@ export default function SectionInvestors({ image, title }: Props) {
   return (
     <div className={"flex w-full py-14 lg:py-28"}>
       <div
-        className={"flex flex-col sm:gap-5 px-6 lg:px-16 sm:flex-row-reverse justify-center items-center"}
+        className={"max-w-[1700px] m-auto flex flex-col sm:gap-5 px-6 lg:px-16 sm:flex-row-reverse justify-center items-center"}
       >
         <div className={"rounded-xl sm:w-2/4"}>
           <image
@@ -23,7 +23,7 @@ export default function SectionInvestors({ image, title }: Props) {
           />
         </div>
         <div
-          className={"text-2xl text-secondary sm:text-4xl md:text-5xl md:leading-[3.8rem] sm:w-2/4 lg:text-[4rem] lg:leading-[4.9rem] "}
+          className={"text-2xl text-secondary sm:text-[2.2rem] sm:leading-[2.7rem] sm:w-2/4 lg:text-[3rem] lg:leading-[3.9rem] xl:text-[4rem] xl:leading-[4.9rem]"}
           dangerouslySetInnerHTML={{ __html: title }}
         >
         </div>
