@@ -44,6 +44,9 @@ function Dots({ images }: SliderNews) {
             class={`"carousel-item ${
               index < 3 ? "sm:group-disabled:first:hidden" : ""
             }`}
+            style={`display: ${
+              index > 0 || index <= images.length ? "none" : "flex"
+            }`}
           >
             <Slider.Dot index={index}>
               <div class={`"py-5" ${index < 3 ? "" : ""}`}>
@@ -88,36 +91,38 @@ function BannerCarousel({ images, title }: SliderNews) {
   const id = useId();
 
   return (
-    <div
-      className={"pt-10 justify-center items-center flex-col px-8 grid pb-5"}
-    >
-      <h3
-        className={"mb-5 text-lg self-start text-gray-300 font-light xl:text-[1.5rem] col-start-2 col-end-11"}
-      >
-        {title}
-      </h3>
+    <div className={"pt-10 px-7 pb-5 w-full "}>
       <div
-        id={id}
-        class="grid grid-cols-1 grid-rows-2 col-start-2 col-end-11"
+        className={"max-w-[1700px] md:px-16 md:grid md:grid-cols-12 md:gap-6 m-auto justify-center items-center flex flex-col pb-5"}
       >
-        <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
-          {images?.map((image, index) => (
-            <Slider.Item
-              index={index}
-              class="carousel-item w-full sm:w-4/12 lg:w-1/4 xl:w-auto"
-            >
-              <BannerItem
-                alt={image.alt}
-                href={image.href}
-                image={image.image}
-              />
-            </Slider.Item>
-          ))}
-        </Slider>
+        <h3
+          className={" mb-5 text-lg md:col-start-1 md:col-end-12 xl:col-start-2 xl:col-end-[-2] self-start text-gray-300 font-light xl:text-[1.5rem] col-start-2 col-end-11"}
+        >
+          {title}
+        </h3>
+        <div
+          id={id}
+          class="grid grid-cols-1 md:col-start-1 md:col-end-12 xl:col-start-2 xl:col-end-[-2] grid-rows-2"
+        >
+          <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
+            {images?.map((image, index) => (
+              <Slider.Item
+                index={index}
+                class="carousel-item w-full sm:w-4/12 lg:w-1/4 xl:w-auto"
+              >
+                <BannerItem
+                  alt={image.alt}
+                  href={image.href}
+                  image={image.image}
+                />
+              </Slider.Item>
+            ))}
+          </Slider>
 
-        <Dots images={images} title={title} />
+          <Dots images={images} title={title} />
 
-        <SliderJS rootId={id} interval={2000} infinite />
+          <SliderJS rootId={id} interval={2000} infinite />
+        </div>
       </div>
     </div>
   );

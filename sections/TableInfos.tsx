@@ -1,5 +1,6 @@
 import MenuTable from "deco-sites/start/islands/MenuTable.tsx";
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
+import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export type Link = {
   titleSimple: string;
@@ -16,10 +17,7 @@ export interface RowProps {
 }
 
 export interface TableProps {
-  title: {
-    titleSimple: string;
-    titleColor: string;
-  };
+  title: HTML;
   primaryOption: {
     title: string;
     rowProps: RowProps[];
@@ -39,7 +37,7 @@ export type Props = {
 function RowTable({ primaryOption, secordOption, index }: Props) {
   return (
     <div
-      className={"grid grid-cols-[auto_1fr_200px_200px] justify-center items-center gap-4 grid-rows-1 py-5 border-b border-gray-200 last:border-b-0"}
+      className={"grid grid-cols-[80px_3fr_1.7fr_1.7fr] justify-center items-center gap-4 grid-rows-1 py-5 border-b border-gray-200 last:border-b-0"}
     >
       <image
         className={"w-[80px] object-contain max-h-14"}
@@ -48,7 +46,9 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
       >
       </image>
       <div>
-        <h4 className={"text-secondary text-xl font-bold"}>
+        <h4
+          className={"text-secondary text-xl 2xl:text-[1.8rem] font-bold 2xl:font-extrabold 2xl:leading-[2.3rem]"}
+        >
           {primaryOption.rowProps[index].title}
         </h4>
         <p className={"text-secondary text-base"}>
@@ -59,7 +59,12 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
         {primaryOption.rowProps[index].iten == "Check"
           ? (
             <div className={"flex justify-center items-center w-12"}>
-              <svg width="32" height="32" fill="none">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                className={"w-full h-full"}
+              >
                 <path
                   d="M18.1682 0.534245L18.624 0.77361C19.2926 1.12473 20.0369 1.30786 20.792 1.30786H21.307C22.8403 1.30786 24.2756 2.06056 25.1461 3.32227L25.4382 3.74549C25.8673 4.36697 26.4407 4.87454 27.1093 5.22565L27.5651 5.46502C28.9225 6.17734 29.8435 7.51043 30.0281 9.03242L30.0902 9.54287C30.181 10.2927 30.4529 11.0086 30.8821 11.6301L31.1742 12.0533C32.0454 13.3143 32.2402 14.9228 31.6971 16.3561L31.5146 16.837C31.247 17.5428 31.1547 18.3035 31.2456 19.0526L31.3076 19.563C31.4922 21.0843 30.9174 22.5991 29.7699 23.6157L29.3848 23.9567C28.8193 24.457 28.3844 25.0879 28.1161 25.7937L27.9337 26.2746C27.3899 27.7079 26.1767 28.7822 24.6881 29.1484L24.1883 29.2717C23.4548 29.4527 22.7769 29.8081 22.2114 30.3092L21.8263 30.6502C20.6788 31.6668 19.1051 32.054 17.6164 31.6877L17.1166 31.5644C16.3831 31.3835 15.6172 31.3835 14.8837 31.5644L14.3839 31.6877C12.8953 32.0547 11.3215 31.6668 10.174 30.6502L9.78891 30.3092C9.22346 29.8089 8.5455 29.4527 7.81201 29.2717L7.3122 29.1484C5.82357 28.7815 4.61046 27.7072 4.06665 26.2746L3.88418 25.7937C3.6166 25.0879 3.18098 24.4578 2.61553 23.9567L2.23039 23.6157C1.08291 22.5991 0.50809 21.0843 0.692726 19.563L0.754751 19.0526C0.845626 18.3028 0.75331 17.5428 0.485733 16.837L0.303259 16.3561C-0.24055 14.9228 -0.0450965 13.315 0.826152 12.0533L1.11825 11.6301C1.54739 11.0086 1.81929 10.2927 1.91017 9.54287L1.97219 9.03242C2.15683 7.51115 3.07784 6.17734 4.4352 5.46502L4.89102 5.22565C5.5596 4.87454 6.13298 4.36697 6.56211 3.74549L6.85421 3.32227C7.72474 2.06128 9.16 1.30786 10.6933 1.30786H11.2083C11.9634 1.30786 12.7077 1.12473 13.3763 0.77361L13.8321 0.534245C15.1902 -0.178082 16.8108 -0.178082 18.1682 0.534245Z"
                   fill="#FE3E6D"
@@ -80,14 +85,14 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
             <div>
               <a
                 href={primaryOption.rowProps[index].link?.href}
-                className={"group w-full justify-center items-center"}
+                className={"group w-full justify-center items-center lg:text-[1.4rem]"}
               >
                 <p className={"text-secondary font-bold group"}>
                   {primaryOption.rowProps[index].link?.titleSimple}
                 </p>
                 <div>
                   <p
-                    className={"text-primary group flex flex-row font-bold text-sm"}
+                    className={"text-primary group flex flex-row font-bold text-sm lg:text-base"}
                   >
                     {primaryOption.rowProps[index].link?.titleColor}
                     <span
@@ -147,14 +152,14 @@ function RowTable({ primaryOption, secordOption, index }: Props) {
             <div>
               <a
                 href={secordOption.rowProps[index].link?.href}
-                className={"group w-full justify-center items-center"}
+                className={"group w-full justify-center items-center lg:text-[1.4rem]"}
               >
                 <p className={"text-secondary font-bold group"}>
                   {secordOption.rowProps[index].link?.titleSimple}
                 </p>
                 <div>
                   <p
-                    className={"text-primary group flex flex-row font-bold text-sm"}
+                    className={"text-primary group flex flex-row font-bold text-sm lg:text-base"}
                   >
                     {secordOption.rowProps[index].link?.titleColor}
                     <span
@@ -197,52 +202,62 @@ export default function TableInfos(
   { title, primaryOption, secordOption }: TableProps,
 ) {
   return (
-    <div className={"px-6 py-12 bg-gray-100 grid grid-cols-12"}>
-      <h3
-        className={"text-[2.2rem] leading-[2.7rem] text-secondary my-6 col-start-1 xl:col-start-2 col-end-10 xl:text-7xl"}
-      >
-        {title.titleSimple}
-        <span className={"font-bold text-primary"}>{title.titleColor}</span>
-      </h3>
+    <div
+      className={" py-12 lg:py-32 bg-gray-100 "}
+    >
       <div
-        className={"md:hidden col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2] row-start-2"}
-      >
-        <MenuTable
-          title={title}
-          primaryOption={primaryOption}
-          secordOption={secordOption}
-        />
-      </div>
-      <div
-        className={"md:flex hidden flex-col col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2]"}
+        className={" px-6 sm:px-8 xl:px-16 grid grid-cols-12 md:gap-6 max-w-[1700px] m-auto"}
       >
         <div
-          className={"grid grid-cols-[100%_200px_200px] flex-row justify-end py-5 px-8"}
+          dangerouslySetInnerHTML={{ __html: title }}
+          className={"text-[2rem] leading-[2.5rem] sm:text-[2.85rem] sm:leading-[3.5rem] text-secondary my-6 col-start-1 col-end-[-1] min-[600px]:col-end-9 xl:col-start-2 xl:col-end-10 xl:text-[3.8rem] xl:leading-[4rem] 2xl:text-[5rem] 2xl:leading-[5.5rem] 2xl:my-12"}
         >
-          <div className={"flex justify-center items-center col-start-2"}>
-            <p className={"font-bold text-secondary text-lg"}>
-              {primaryOption.title}
-            </p>
+          {title}
+        </div>
+        <div
+          className={"sm:hidden col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2] row-start-2"}
+        >
+          <MenuTable
+            title={title}
+            primaryOption={primaryOption}
+            secordOption={secordOption}
+          />
+        </div>
+        <div
+          className={"sm:flex hidden flex-col col-start-1 xl:col-start-2 col-end-[-1] xl:col-end-[-2]"}
+        >
+          <div
+            className={"grid grid-cols-[80px_3fr_1.7fr_1.7fr] flex-row justify-end py-5 px-8"}
+          >
+            <div className={"flex justify-center items-center col-start-3"}>
+              <p
+                className={"font-bold text-secondary text-[0.81rem] md:text-base lg:text-xl lg:font-extrabold 2xl:text-[1.8rem]"}
+              >
+                {primaryOption.title}
+              </p>
+            </div>
+            <div className={"flex justify-center items-center col-start-4"}>
+              <p
+                className={"font-bold text-secondary text-[0.81rem] md:text-base lg:text-xl lg:font-extrabold 2xl:text-[1.8rem]"}
+              >
+                {secordOption.title}
+              </p>
+            </div>
           </div>
-          <div className={"flex justify-center items-center col-start-3"}>
-            <p className={"font-bold text-secondary text-lg"}>
-              {secordOption.title}
-            </p>
+          <div className={" flex flex-col bg-base-100 p-8 rounded-lg "}>
+            {primaryOption.rowProps.map((row, index) => {
+              return (
+                <RowTable
+                  primaryOption={primaryOption}
+                  secordOption={secordOption}
+                  index={index}
+                />
+              );
+            })}
           </div>
         </div>
-        <div className={" flex flex-col bg-base-100 p-8 rounded-lg "}>
-          {primaryOption.rowProps.map((row, index) => {
-            return (
-              <RowTable
-                primaryOption={primaryOption}
-                secordOption={secordOption}
-                index={index}
-              />
-            );
-          })}
+        <div>
         </div>
-      </div>
-      <div>
       </div>
     </div>
   );

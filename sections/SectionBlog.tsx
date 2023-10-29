@@ -35,11 +35,11 @@ function Post({ post }: { post: Posts }) {
           />
           <div className={"flex flex-col sm:justify-between"}>
             <h5
-              className={"mb-7 text-[1.7rem] text-secondary sm:mb-0 lg:text-[2.5rem] xl:text-[3.4rem]"}
+              className={"mb-7 text-[1.5rem] text-secondary sm:mb-0 lg:text-[2.2rem] xl:text-[3.4rem] 2xl:text-[3rem]"}
             >
               {title}
             </h5>
-            <p className={"font-bold text-primary text-lg"}>
+            <p className={"font-bold text-primary text-base"}>
               {date}
             </p>
           </div>
@@ -73,9 +73,11 @@ export default function SectionBlog({ title, posts }: Props) {
     <div
       className={"w-full py-14 bg-gradient-to-b from-gray-100 to-base-100 xl:pt-36 xl:pb-52"}
     >
-      <div className={"w-full px-6 xl:px-16 flex flex-col gap-6"}>
+      <div
+        className={"w-full max-w-[1700px] m-auto px-6 xl:px-16 flex flex-col md:gap-6"}
+      >
         <h3
-          className={"my-6 text-4xl text-secondary md:text-[4rem] xl:text-[6.5rem] xl:my-12 xl:leading-[7.9rem]"}
+          className={"my-6 text-[2rem] text-secondary sm:text-[2.85rem] xl:text-[5rem] xl:my-12 xl:leading-[5.9rem]"}
         >
           {title.titleSimple}
           <strong className={"text-primary"}>{title.titleColor}</strong>

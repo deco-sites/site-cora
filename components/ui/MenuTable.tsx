@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
+import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
 export type Link = {
   titleSimple: string;
@@ -16,10 +17,7 @@ export interface RowProps {
 }
 
 export interface TableProps {
-  title: {
-    titleSimple: string;
-    titleColor: string;
-  };
+  title: HTML;
   primaryOption: {
     title: string;
     rowProps: RowProps[];

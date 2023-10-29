@@ -16,11 +16,7 @@ export interface Article {
 }
 
 export interface Props {
-  title: {
-    titleSimple: string;
-    titleColor: string;
-    titleSimpleSecord: string;
-  };
+  title: HTML;
   subTitle: HTML;
   articles: Article[];
 }
@@ -32,21 +28,22 @@ export default function Articles({ props }: { props: Props }) {
     <div className={"w-full "}>
       <div className={"flex flex-col"}>
         <div
-          className={" grid grid-cols-1 xl:grid-cols-12 px-6 py-14 xl:px-16"}
+          className={" px-6 sm:px-8 xl:px-16 grid grid-cols-12 md:gap-6 max-w-[1700px] m-auto"}
         >
-          <h3
-            className={"xl:col-start-2 xl:col-end-[-2] text-[2.2rem] sm:text-[3rem] sm:leading-[3.5rem] text-secondary md:text-5xl xl:text-[5.6rem] xl:my-14"}
-          >
-            {title.titleSimple}
-            <strong className={"text-primary font-bold"}>
-              {title.titleColor}
-            </strong>
-            {title.titleSimpleSecord}
-          </h3>
           <div
-            className={"text-secondary text-base py-2 xl:col-start-2 xl:col-end-[-2] md:text-[1.5rem] xl:text-[1.8rem] font-light"}
-            dangerouslySetInnerHTML={{ __html: subTitle }}
+            className={"py-14 lg:py-20 flex flex-col gap-6 col-start-1 col-end-[-1] min-[600px]:col-end-9 xl:col-start-2 xl:col-end-11"}
           >
+            <div
+              dangerouslySetInnerHTML={{ __html: title }}
+              className={"text-[2rem] leading-[2.5rem] sm:text-[2.85rem] sm:leading-[3.5rem] text-secondary my-6 xl:text-[5rem] xl:leading-[5.5rem] 2xl:my-12"}
+            >
+            </div>
+
+            <div
+              className={"text-secondary text-base py-2 xl:col-start-2 xl:col-end-[-2] md:text-[1.5rem] xl:text-[1.8rem] font-light"}
+              dangerouslySetInnerHTML={{ __html: subTitle }}
+            >
+            </div>
           </div>
         </div>
         <div>
