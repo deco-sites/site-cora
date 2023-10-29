@@ -28,7 +28,7 @@ export default function Card({ card }: { card: Card }) {
         </div>
         <div
           dangerouslySetInnerHTML={{ __html: description }}
-          className={"my-10 text-[1rem] font-light text-secondary xl:text-[1.2rem]"}
+          className={"my-10 text-[1rem] font-light text-secondary 2xl:text-[1.2rem]"}
         >
         </div>
         <a

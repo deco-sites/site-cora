@@ -43,7 +43,7 @@ export default function Header({ logo, itensMenu, login, register }: Props) {
               return (
                 <li
                   style={`transition-delay: `}
-                  className={` text-secondary hover:text-primary xl:text-lg`}
+                  className={` text-secondary hover:text-primary xl:text-base`}
                 >
                   <a href={link.href}>
                     {link.label}
