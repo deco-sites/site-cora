@@ -2,8 +2,8 @@ import Icon from "../components/ui/Icon.tsx";
 import Button from "../components/ui/Button.tsx";
 import Slider from "../components/ui/Slider.tsx";
 import SliderJS from "../islands/SliderJS.tsx";
-import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
-import { useId } from "../sdk/useId.tsx";
+import { Picture, Source } from "apps/website/components/Picture.tsx";
+import { useId } from "../sdk/useId.ts";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import { HTML } from "deco-sites/std/components/HTMLRenderer.tsx";
 
